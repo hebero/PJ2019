@@ -15,7 +15,8 @@ public class BusOrder extends PaintOrder {
     @Override
     public String getType() {
         // TODO Auto-generated method stub
-        return null;
+        return "BUS";
+        //return null;
     }
 
     @Override

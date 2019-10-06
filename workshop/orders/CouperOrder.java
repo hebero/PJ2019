@@ -15,7 +15,7 @@ public class CouperOrder extends PaintOrder{
     @Override
     public String getType() {
         // TODO Auto-generated method stub
-        return null;
+        return "COUPE";
     }
 
     @Override
