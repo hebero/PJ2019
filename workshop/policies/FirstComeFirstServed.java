@@ -18,20 +18,31 @@ public class FirstComeFirstServed extends Policy {
     public void add(PaintOrder order) {
         // TODO Auto-generated method stub
         queue.add(order);
+        queuedOrders ++;
     }
 
     @Override
     public PaintOrder remove() {
         // TODO Auto-generated method stub
-        var temp = queue.remove();
-        return temp;
+        if (!queue.isEmpty()) {
+            var temp = queue.remove();
+            processedOrders ++;
+            currentOrders --;
+            queuedOrders --;
+            return temp;    
+        }
+        return null;
     }
 
     @Override
     public PaintOrder next() {
         // TODO Auto-generated method stub
-        var temp = queue.peek();
-        return temp;
+        if (!queue.isEmpty()) {
+            currentOrders ++;
+            var temp = queue.peek();
+            return temp;
+        }
+        return null;
     }
 
     

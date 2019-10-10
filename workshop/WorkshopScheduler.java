@@ -8,7 +8,7 @@ import workshop.policies.FirstComeFirstServed;
  * WorkshopScheduler
  */
 public class WorkshopScheduler {
-    static PolicyOrderType typeSelect;
+    public static PolicyOrderType typeSelect;
     public static FirstComeFirstServed fcfs;
     public static Integer price;
     public static double sedanTime;
