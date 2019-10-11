@@ -16,6 +16,7 @@ public class WorkshopScheduler {
     public static double coupeTimer;
     public static double timer1;
     public static double timer2;
+	public static boolean isRun;
 
     public static void main(String[] args) {
         Double[] timers;
@@ -41,7 +42,7 @@ public class WorkshopScheduler {
                 busTime = Double.parseDouble(args[3]);
                 coupeTimer = Double.parseDouble(args[4]);
                 timers = getTimers(args[1]);
-                
+                isRun = true;
                 switch (args[1]) {
                 case "value":
         
@@ -85,5 +86,9 @@ public class WorkshopScheduler {
         rr = rr+ i;
 
 		return rr;
+	}
+
+	public static String getNewPlate() {
+		return null;
 	}
 }

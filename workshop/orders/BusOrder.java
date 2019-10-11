@@ -8,8 +8,11 @@ import workshop.WorkshopScheduler;
 public class BusOrder extends PaintOrder {
 
     private double price;
-
-    protected BusOrder(int number, String plate, int total, double time) {
+    /** 
+     * Constructor
+     * @param number <numero de orden>, 
+     * **/
+    public BusOrder(int number, String plate, int total, double time) {
         super(number, plate, total, time);
         // TODO Auto-generated constructor stub
     }
@@ -47,6 +50,5 @@ public class BusOrder extends PaintOrder {
 
         this.state = State.DONE;
     }
-
     
 }
